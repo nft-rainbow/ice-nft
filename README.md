@@ -1,13 +1,13 @@
-# Sample Hardhat Project
+# ICE NFTs
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project is developed with [Hardhat](https://hardhat.org/). Which is a Ethereum development environment for professionals.
 
-Try running some of the following tasks:
+## TODO
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+1. Setup 项目
+2. 创建账户, 获取 CFX
+3. 部署合约
+4. 铸造 NFT
+5. ERC1155 介绍
+6. Metadata 介绍
+
