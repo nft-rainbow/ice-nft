@@ -55,7 +55,7 @@ After contract deployed, config `ICE_NFT` in `.env` file.
 ### Mint NFT
 
 ```bash
-npx hardhat run scripts/mintNft.ts --network ecfx_testnet
+npx hardhat mint --receiver 0x7deFad05B632Ba2CeF7EA20731021657e20a7596 --token-id 1 --network ecfx_testnet
 ```
 
 ## Other
