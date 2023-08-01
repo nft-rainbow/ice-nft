@@ -16,12 +16,18 @@ contract ICENFT is Initializable, ERC1155Upgradeable, AccessControlUpgradeable, 
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
+    string public name; // contract name
+	string public symbol; // contract symbol
+
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
         _disableInitializers();
     }
 
     function initialize() initializer public {
+        // update name and symbol if want
+        name = "ICE AI NFT"; 
+        symbol = "ICEAI";
         // TODO: replace this with real url for example: https://ice.com/metadata/{id}.json
         string memory _baseURI = "https://nftrainbow.oss-cn-hangzhou.aliyuncs.com/1155-example/{id}.json";
         __ERC1155_init(_baseURI);
@@ -40,6 +46,14 @@ contract ICENFT is Initializable, ERC1155Upgradeable, AccessControlUpgradeable, 
 
     function setURI(string memory newuri) public onlyRole(URI_SETTER_ROLE) {
         _setURI(newuri);
+    }
+
+    function setName(string memory _name) public onlyRole(MINTER_ROLE) {
+        name = _name;
+    }
+
+    function setSymbol(string memory _symbol) public onlyRole(MINTER_ROLE) {
+        symbol = _symbol;
     }
 
     function pause() public onlyRole(PAUSER_ROLE) {
