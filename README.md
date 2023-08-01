@@ -4,7 +4,7 @@ This project is developed with [Hardhat](https://hardhat.org/). Which is a Ether
 
 ## Contract Features
 
-The main contract file is `contracts/ICENFT.sol`.
+The main contract file is `contracts/ICENFT.sol`. It's developed with [OpenZeppelin-Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) main features are:
 
 1. ERC115
 2. Mint/Burn
