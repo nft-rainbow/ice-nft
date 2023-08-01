@@ -19,4 +19,11 @@
 
 可通过 confluxscan 提供的 OpenAPI 查询某地址所拥有的 NFT: https://evmapi.confluxscan.net/doc
 
-## 常用连接
+## 小冰 NFT 如何对应合约?
+
+小冰 NFT 可以分为两个 1155 合约, 所有明星或网红 NFT 铸造到一个 NFT, 明星所生成的 NFT 铸造到另一个 NFT.
+
+## 常用链接
+
+1. Conflux eSpace 区块浏览器: https://evm.confluxscan.net/
+2. Conflux eSpace: http://doc.confluxnetwork.org/docs/espace
