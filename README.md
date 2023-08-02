@@ -9,7 +9,7 @@ The main contract file is `contracts/ICENFT.sol`. It's developed with [OpenZeppe
 1. ERC115
 2. Mint/Burn
 3. Pauseable
-4. NFT metadata uri upgradeable
+4. NFT metadata uri updatable
 5. Contract upgradeable
 
 ## Pre-requisites
@@ -38,7 +38,7 @@ Fill in the environment variables in `.env` file.
 
 ## Common operations
 
-### Compile
+### Compile Contracts
 
 ```bash
 npx hardhat compile
@@ -57,6 +57,11 @@ After contract deployed, config `ICE_NFT` in `.env` file.
 ```bash
 npx hardhat mint --receiver 0x7deFad05B632Ba2CeF7EA20731021657e20a7596 --token-id 1 --network ecfx_testnet
 ```
+
+## Networks
+
+* `ecfx` - Conflux eSpace
+* `ecfx_testnet` - Conflux eSpace Testnet
 
 ## Other
 

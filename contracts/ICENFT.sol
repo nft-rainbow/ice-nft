@@ -17,7 +17,7 @@ contract ICENFT is Initializable, ERC1155Upgradeable, AccessControlUpgradeable, 
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
     string public name; // contract name
-	string public symbol; // contract symbol
+    string public symbol; // contract symbol
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
