@@ -44,7 +44,7 @@ Fill in the environment variables in `.env` file.
 npx hardhat compile
 ```
 
-### Deploy contract
+### Deploy 1155 contract
 
 ```bash
 npx hardhat run scripts/deployIceNft.ts --network ecfx_testnet
@@ -52,10 +52,24 @@ npx hardhat run scripts/deployIceNft.ts --network ecfx_testnet
 
 After contract deployed, config `ICE_NFT` in `.env` file.
 
-### Mint NFT
+### Mint 1155 NFT
 
 ```bash
 npx hardhat mint --receiver 0x7deFad05B632Ba2CeF7EA20731021657e20a7596 --token-id 1 --network ecfx_testnet
+```
+
+### Deploy 721 contract
+
+```bash
+npx hardhat run scripts/deploy721.ts --network ecfx_testnet
+```
+
+After contract deployed, config `ICE_NFT721` in `.env` file.
+
+### Mint 721 NFT
+
+```bash
+npx hardhat mint721 --receiver 0x7deFad05B632Ba2CeF7EA20731021657e20a7596 --token-uri https://x.com/x.json --network ecfx_testnet
 ```
 
 ## Networks

@@ -19,6 +19,18 @@ task("mint", "Mint NFT")
         console.log(`Mint ${tokenId} to ${receiver} tx hash: ${tx.hash}`);
     });
 
+// @ts-ignore
+task("mint721", "Mint 721 NFT")
+    .addParam("receiver", "The receiver's address")
+    .addParam("tokenUri", "The token uri")
+    .setAction(async (args: {receiver: string, tokenUri: number}, hre: any) => {
+        const IceNft = await hre.ethers.getContractAt("ICENFT721", process.env.ICE_NFT721 as string);
+        const { receiver, tokenUri } = args;
+        const tx = await IceNft.safeMint(receiver, tokenUri);
+        await tx.wait();
+        console.log(`Mint NFT to ${receiver} tx hash: ${tx.hash}`);
+    });
+
 const config: HardhatUserConfig = {
     solidity: "0.8.19",
     networks: {
